@@ -13,7 +13,7 @@ FastAPI + Celery + RabbitMQ + PostgreSQL -pipeline URL-analyysiin.
 ## Käynnistys
 
 Vaatimukset: Docker Desktop + Docker Compose (v2). 
-Python riippuvuudet: requirements.txt (ladataan automaattisesti Docker buildissä)
+Python riippuvuudet: requirements.txt (ladataan automaattisesti docker compose up --buildissä)
 
 ```bash
 git clone https://github.com/Jouni031002/Pipeline-harjoitustehtava
