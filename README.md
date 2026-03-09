@@ -13,7 +13,7 @@ FastAPI + Celery + RabbitMQ + PostgreSQL -pipeline URL-analyysiin.
 ## Käynnistys
 
 Vaatimukset: Docker Desktop + Docker Compose (v2). 
-Python riippuvuudet: requirements.txt
+Python riippuvuudet: requirements.txt (ladataan automaattisesti Docker buildissä)
 
 ```bash
 git clone https://github.com/Jouni031002/Pipeline-harjoitustehtava
@@ -36,6 +36,12 @@ docker compose ps
 API: `http://localhost:8000`
 RabbitMQ Management UI: `http://localhost:15672` login: guest/guest
 RabbitMQ broker URL (Celery): `amqp://guest:guest@localhost:5672//`
+
+Tietokannan nollaus: 
+
+```bash
+docker compose down -v
+```
 
 ## Esimerkkikutsut
 

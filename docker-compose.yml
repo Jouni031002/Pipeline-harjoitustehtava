@@ -37,7 +37,7 @@ services:
       - "15672:15672"
 
   postgres:
-    image: "postgres:13"
+    image: "postgres:16"
     environment:
       POSTGRES_DB: urls
       POSTGRES_USER: postgres
