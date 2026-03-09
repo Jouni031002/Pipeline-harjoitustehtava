@@ -12,7 +12,8 @@ FastAPI + Celery + RabbitMQ + PostgreSQL -pipeline URL-analyysiin.
 
 ## Käynnistys
 
-Vaatimukset: Docker Desktop + Docker Compose (v2).
+Vaatimukset: Docker Desktop + Docker Compose (v2). 
+Python riippuvuudet: requirements.txt
 
 ```bash
 git clone https://github.com/Jouni031002/Pipeline-harjoitustehtava
@@ -33,7 +34,7 @@ docker compose ps
 ```
 
 API: `http://localhost:8000`
-RabbitMQ Management UI: `http://localhost:15672` (guest/guest)
+RabbitMQ Management UI: `http://localhost:15672` login: guest/guest
 RabbitMQ broker URL (Celery): `amqp://guest:guest@localhost:5672//`
 
 ## Esimerkkikutsut
@@ -63,9 +64,9 @@ curl http://localhost:8000/results
 ## Mitä tekisin lisää enemmällä ajalla
 
 - Lisäisin kattavat testit (unit + integraatio) API:lle, workerille ja DLQ-polulle.
-- Tarkempi virheenkäsittely
-- Monitorointi
-- Skaalautuva worker-arkkitehtuuri
+- Tarkempi virheenkäsittely, esimerkiksi käsittelemällä erilaisia HTTP-virheitä ja timeout-tilanteita tarkemmin.
+- Lisäisin parempaa lokitusta ja monitorointia, jotta olisi helpompi nähdä mitä pipeline tekee ja jos jokin menee pieleen.
+- Skaalautuva worker-arkkitehtuuri: useampia worker-prosesseja tai -kontteja, jolloin useampia URL voidaan käsitellä samanaikaisesti.
 
 ## AI-työkalujen käyttö
 
