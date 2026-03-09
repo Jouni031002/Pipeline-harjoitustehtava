@@ -46,6 +46,7 @@ def results():
     rows = db.query(URLResult).all()
     data = [
         {
+            "id": r.id,
             "url": r.url,
             "status_code": r.status_code,
             "response_ms": r.response_ms,
