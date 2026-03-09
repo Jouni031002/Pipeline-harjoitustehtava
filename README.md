@@ -73,8 +73,3 @@ curl http://localhost:8000/results
 - Tarkempi virheenkäsittely, esimerkiksi käsittelemällä erilaisia HTTP-virheitä ja timeout-tilanteita tarkemmin.
 - Lisäisin parempaa lokitusta ja monitorointia, jotta olisi helpompi nähdä mitä pipeline tekee ja jos jokin menee pieleen.
 - Skaalautuva worker-arkkitehtuuri: useampia worker-prosesseja tai -kontteja, jolloin useampia URL voidaan käsitellä samanaikaisesti.
-
-## AI-työkalujen käyttö
-
-Käytin GitHub Copilotia toteutuksen avustuksessa, erityisesti Celery/RabbitMQ-konfiguraation tarkentamiseen.
-Hyödynsin sitä myös virhetilanteiden läpikäyntiin.
